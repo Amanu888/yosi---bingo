@@ -1,0 +1,131 @@
+:root {
+  --bg: var(--tg-theme-bg-color, #0f1115);
+  --text: var(--tg-theme-text-color, #f1f1f1);
+  --hint: var(--tg-theme-hint-color, #9a9a9a);
+  --accent: var(--tg-theme-button-color, #5b8def);
+  --accent-text: var(--tg-theme-button-text-color, #ffffff);
+  --cell-marked: #2ecc71;
+  --cell-bg: #1c1f26;
+  --free-bg: #e8b400;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 16px;
+}
+
+#app { max-width: 480px; margin: 0 auto; }
+
+h1 { text-align: center; font-size: 22px; margin-bottom: 4px; }
+
+#status-bar {
+  text-align: center;
+  color: var(--hint);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#last-call {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  min-height: 36px;
+  margin-bottom: 12px;
+  color: var(--accent);
+}
+
+#card-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.col-header {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--accent);
+  padding-bottom: 4px;
+}
+
+.cell {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cell-bg);
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cell.marked {
+  background: var(--cell-marked);
+  color: #06270f;
+  transform: scale(0.96);
+}
+
+.cell.free {
+  background: var(--free-bg);
+  color: #2b1d00;
+  font-size: 12px;
+}
+
+#controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled { opacity: 0.5; cursor: default; }
+
+#called-numbers h3 {
+  font-size: 14px;
+  color: var(--hint);
+  margin-bottom: 6px;
+}
+
+#called-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.called-chip {
+  background: var(--cell-bg);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+#winner-banner {
+  margin-top: 16px;
+  padding: 14px;
+  text-align: center;
+  background: var(--cell-marked);
+  color: #06270f;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.hidden { display: none; }

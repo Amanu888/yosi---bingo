@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yosi Bingo</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>🎱 Yosi Bingo</h1>
+
+    <div id="status-bar">
+      <span id="status-text">Loading your card...</span>
+    </div>
+
+    <div id="last-call"></div>
+
+    <div id="card-container"></div>
+
+    <div id="controls">
+      <button id="draw-btn">Draw Next Number</button>
+      <button id="refresh-btn">Refresh</button>
+    </div>
+
+    <div id="called-numbers">
+      <h3>Called so far</h3>
+      <div id="called-grid"></div>
+    </div>
+
+    <div id="winner-banner" class="hidden"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
